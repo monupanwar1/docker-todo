@@ -13,15 +13,15 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
 
-  backend:
-    build: .
-    container_name: backend
-    depends_on:
-      - db
-    ports:
-      - "3000:3000"
-    environment:
-      DATABASE_URL: "postgresql://postgres:mypassword@db:5432/todos"
+  # backend:
+  #   build: .
+  #   container_name: backend
+  #   depends_on:
+  #     - db
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     DATABASE_URL: "postgresql://postgres:mypassword@db:5432/todo"
 
 volumes:
   db_data:
